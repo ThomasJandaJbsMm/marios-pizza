@@ -1,0 +1,189 @@
+/* Mario's Pizza – style.css
+   Übung 01: Einbinden, Selektoren, Farben, Schrift */
+
+/* Farben: Rot-Weiß der Markise, Grün der italienischen Flagge, Creme für den Hintergrund */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #fff6ec;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #c62828;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-style: italic;
+    color: #2e7d32;
+}
+
+a {
+    color: #c62828;
+}
+
+strong {
+    color: #2e7d32;
+}
+
+/* Übung 02: Box-Modell, Abstände, Karten, Bilder, Listen, Links */
+
+body {
+    margin: 0;
+    line-height: 1.6;
+}
+
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding-top: 30px;
+}
+
+main section {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #c62828;
+    padding-bottom: 6px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure {
+    margin: 10px 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666666;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+dt {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+dd {
+    margin: 0 0 8px 0;
+}
+
+address {
+    font-style: normal;
+}
+
+a:hover {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    padding: 20px;
+
+    display:flex;
+    justify-content: space-between;
+}
+
+
+nav {
+    background-color: #c62828;
+
+    position: sticky; top: 0; 
+}
+
+nav ul {
+    list-style: none;      /* keine Punkte */
+    margin: 0 auto;
+    padding: 0;
+    max-width: 900px;
+    display: flex;         /* Kinder (li) nebeneinander */
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li {
+    margin-bottom:0;
+}
+
+nav a {
+    display: block;        /* damit padding rundherum wirkt */
+    padding: 12px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+
+header {
+    display: flex;
+    align-items: center;   /* vertikal mittig */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;       /* bei Platzmangel umbrechen */
+}
+
+header img {
+    width: 100px;
+    border-radius: 50%;    /* rund */
+}
+
+.galerie {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galerie figure {
+    flex: 1 1 200px;   /* wachsen, schrumpfen, mind. 200px breit */
+    margin: 0;
+}
+
+.galerie img {
+    width: 100%;
+}
+
+
+dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;  /* 1. Spalte so breit wie nötig, 2. Spalte Rest */
+    gap: 6px 20px;                            /* Zeilen-, Spaltenabstand */
+}
+
+dd {
+    margin: 0;
+}

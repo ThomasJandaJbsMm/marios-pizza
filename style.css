@@ -8,7 +8,9 @@ body {
     background-color: #fff6ec;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: Georgia, "Times New Roman", serif;
     color: #c62828;
 }
@@ -37,7 +39,9 @@ body {
     line-height: 1.6;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
@@ -111,27 +115,25 @@ footer {
     padding: 20px;
 }
 
+/* Übung 03: Layout mit Flexbox und Grid */
 
+/* Navigation als rote Leiste über die ganze Breite */
 nav {
     background-color: #c62828;
 }
 
 nav ul {
-    list-style: none;      /* keine Punkte */
+    list-style: none;
     margin: 0 auto;
     padding: 0;
     max-width: 900px;
-    display: flex;         /* Kinder (li) nebeneinander */
+    display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-nav ul li {
-    margin-bottom:0;
-}
-
 nav a {
-    display: block;        /* damit padding rundherum wirkt */
+    display: block;
     padding: 12px 20px;
     color: #ffffff;
     font-weight: bold;
@@ -143,20 +145,21 @@ nav a:hover {
     color: #ffffff;
 }
 
-
+/* Kopfbereich: Logo und Name nebeneinander */
 header {
     display: flex;
-    align-items: center;   /* vertikal mittig */
+    align-items: center;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;       /* bei Platzmangel umbrechen */
+    flex-wrap: wrap;
 }
 
 header img {
     width: 100px;
-    border-radius: 50%;    /* rund */
+    border-radius: 50%;
 }
 
+/* Bildergalerie: Bilder nebeneinander, bei Platzmangel umbrechen */
 .galerie {
     display: flex;
     gap: 20px;
@@ -164,7 +167,7 @@ header img {
 }
 
 .galerie figure {
-    flex: 1 1 200px;   /* wachsen, schrumpfen, mind. 200px breit */
+    flex: 1 1 200px;
     margin: 0;
 }
 
@@ -172,13 +175,50 @@ header img {
     width: 100%;
 }
 
-
+/* Öffnungszeiten als zwei Spalten (Grid) */
 dl {
     display: grid;
-    grid-template-columns: max-content 1fr;  /* 1. Spalte so breit wie nötig, 2. Spalte Rest */
-    gap: 6px 20px;                            /* Zeilen-, Spaltenabstand */
-}
+    grid-template-columns: max-content 1fr;
+    gap: 6px 20px;
 
+}
 dd {
     margin: 0;
+}
+
+
+
+/* Handy-Ansicht: gilt nur bis 600 px Breite */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Links untereinander */
+        gap: 0;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap:0;
+    }
+
+    main section {
+        padding: 15px;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+    }
+
+    .galerie {
+        flex-direction: column;
+    }
 }
